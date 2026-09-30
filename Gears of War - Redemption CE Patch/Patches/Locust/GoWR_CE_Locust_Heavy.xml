@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <!-- ====================================================== -->
+    <!-- Locust Torque Bow                                     -->
+    <!-- ====================================================== -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Gun_GOW_TorqueBow"]/verbs/li</xpath>
+        <value>
+            <li Class="CombatExtended.VerbPropertiesCE">
+                <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>GOW_CE_TorqueBolt</defaultProjectile>
+                <soundCast>Shot_GOW_TorqueBow</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <soundAiming>Shot_GOW_TorqueBow_Aiming</soundAiming>
+                <warmupTime>4.5</warmupTime>
+                <range>29.9</range>
+                <burstShotCount>1</burstShotCount>
+                <ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+                <muzzleFlashScale>9</muzzleFlashScale>
+
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Gun_GOW_TorqueBow"]/statBases</xpath>
+        <value>
+            <Bulk>5.5</Bulk>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Gun_GOW_TorqueBow"]</xpath>
+        <value>
+            <comps />
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Gun_GOW_TorqueBow"]/comps</xpath>
+        <value>
+            <li Class="CombatExtended.CompProperties_AmmoUser">
+                <magazineSize>1</magazineSize>
+                <reloadTime>3</reloadTime>
+                <ammoSet>AmmoSet_GOW_TorqueBow</ammoSet>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Gun_GOW_TorqueBow"]/comps</xpath>
+        <value>
+            <li Class="CombatExtended.CompProperties_FireModes">
+                <aiUseBurstMode>false</aiUseBurstMode>
+                <aiAimMode>AimedShot</aiAimMode>
+                <aimedBurstShotCount>1</aimedBurstShotCount>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- Melee -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Gun_GOW_TorqueBow"]/tools</xpath>
+        <value>
+            <tools>
+
+                <li Class="CombatExtended.ToolCE">
+                    <label>stock</label>
+                    <capacities>
+                        <li>Blunt</li>
+                    </capacities>
+                    <power>8</power>
+                    <cooldownTime>2.0</cooldownTime>
+                    <armorPenetrationBlunt>1.1</armorPenetrationBlunt>
+                    <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+                </li>
+
+                <li Class="CombatExtended.ToolCE">
+                    <label>blade</label>
+                    <capacities>
+                        <li>Cut</li>
+                    </capacities>
+                    <power>14</power>
+                    <cooldownTime>2.3</cooldownTime>
+                    <armorPenetrationSharp>1.5</armorPenetrationSharp>
+                    <soundMeleeHit>Shot_GOW_TorqueBowMelee</soundMeleeHit>
+                    <linkedBodyPartsGroup>Blade</linkedBodyPartsGroup>
+                </li>
+
+                <li Class="CombatExtended.ToolCE">
+                    <label>barrel</label>
+                    <capacities>
+                        <li>Poke</li>
+                    </capacities>
+                    <power>10</power>
+                    <cooldownTime>2.2</cooldownTime>
+                    <armorPenetrationSharp>1.0</armorPenetrationSharp>
+                    <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+                </li>
+
+            </tools>
+        </value>
+    </Operation>
+
+    <!-- ====================================================== -->
+    <!-- Locust Boomshot Grenade Launcher                      -->
+    <!-- ====================================================== -->
+
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>Gun_GOW_Boomshot</defName>
+
+        <statBases>
+            <WorkToMake>77500</WorkToMake>
+            <Mass>7.5</Mass>
+            <Bulk>8.0</Bulk>
+            <SwayFactor>1.40</SwayFactor>
+            <ShotSpread>0.180</ShotSpread>
+            <SightsEfficiency>0.55</SightsEfficiency>
+            <RangedWeapon_Cooldown>2.8</RangedWeapon_Cooldown>
+        </statBases>
+
+        <costList>
+            <Steel>120</Steel>
+            <ComponentIndustrial>10</ComponentIndustrial>
+            <Chemfuel>125</Chemfuel>
+        </costList>
+
+        <Properties>
+            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+            <hasStandardCommand>true</hasStandardCommand>
+            <defaultProjectile>Bullet_GOW_Boomshot50mm_HE</defaultProjectile>
+            <warmupTime>1.35</warmupTime>
+            <range>30</range>
+            <minRange>7</minRange>
+            <soundCast>Shot_GOW_Boomshot</soundCast>
+            <soundCastTail>GunTail_Medium</soundCastTail>
+            <muzzleFlashScale>9</muzzleFlashScale>
+            <recoilAmount>2.30</recoilAmount>
+
+            <targetParams>
+                <canTargetLocations>true</canTargetLocations>
+            </targetParams>
+
+            <ignorePartialLoSBlocker>true</ignorePartialLoSBlocker>
+            <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+            <onlyManualCast>false</onlyManualCast>
+
+            <ai_AvoidFriendlyFireRadius>10</ai_AvoidFriendlyFireRadius>
+            <minRangeInCover>4</minRangeInCover>
+        </Properties>
+
+        <AmmoUser>
+            <magazineSize>1</magazineSize>
+            <reloadTime>3.8</reloadTime>
+            <ammoSet>AmmoSet_GOW_Boomshot50mm</ammoSet>
+        </AmmoUser>
+
+        <weaponTags>
+            <li>CE_AI_Launcher</li>
+            <li>CE_AI_AOE</li>
+            <li>CE_HeavyWeapon</li>
+        </weaponTags>
+    </Operation>
+
+    <!-- Melee -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Gun_GOW_Boomshot"]/tools</xpath>
+        <value>
+            <tools>
+
+                <li Class="CombatExtended.ToolCE">
+                    <label>stock</label>
+                    <capacities>
+                        <li>Blunt</li>
+                    </capacities>
+                    <power>10</power>
+                    <cooldownTime>2.0</cooldownTime>
+                    <armorPenetrationBlunt>1.1</armorPenetrationBlunt>
+                </li>
+
+                <li Class="CombatExtended.ToolCE">
+                    <label>barrel</label>
+                    <capacities>
+                        <li>Blunt</li>
+                        <li>Poke</li>
+                    </capacities>
+                    <power>12</power>
+                    <cooldownTime>2.1</cooldownTime>
+                    <armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+                    <armorPenetrationSharp>0.5</armorPenetrationSharp>
+                </li>
+
+            </tools>
+        </value>
+    </Operation>
+
+</Patch>
