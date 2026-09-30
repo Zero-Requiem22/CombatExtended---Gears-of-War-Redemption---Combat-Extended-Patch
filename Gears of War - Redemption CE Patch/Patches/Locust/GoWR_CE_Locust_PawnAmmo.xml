@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <!-- ====================================================== -->
+    <!-- Standard Locust Drone                                  -->
+    <!-- Hammerburst Mk I only                                  -->
+    <!-- ====================================================== -->
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/PawnKindDef[defName="GOW_Locust_Fighter_Drone"]/weaponTags</xpath>
+        <value>
+            <weaponTags>
+                <li>LocustHammerburst</li>
+                <li>Locustsidearm</li>
+            </weaponTags>
+        </value>
+    </Operation>
+
+    <!-- Hammerburst costs at least 625; prevent weaponless spawns. -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/PawnKindDef[defName="GOW_Locust_Fighter_Drone"]/weaponMoney</xpath>
+        <value>
+            <weaponMoney>650~850</weaponMoney>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/PawnKindDef[defName="GOW_Locust_Fighter_Drone"]</xpath>
+        <value>
+            <inventoryOptions>
+                <skipChance>0</skipChance>
+
+                <subOptionsChooseOne>
+                    <!-- Common standard rifle ammunition -->
+                    <li>
+                        <choiceChance>70</choiceChance>
+                        <thingDef>Ammo_762x39mmSoviet_FMJ</thingDef>
+                        <countRange>117~156</countRange>
+                    </li>
+
+                    <!-- Less-common armor-piercing ammunition -->
+                    <li>
+                        <choiceChance>20</choiceChance>
+                        <thingDef>Ammo_762x39mmSoviet_AP</thingDef>
+                        <countRange>78~117</countRange>
+                    </li>
+
+                    <!-- Anti-unarmored / biological-target ammunition -->
+                    <li>
+                        <choiceChance>10</choiceChance>
+                        <thingDef>Ammo_762x39mmSoviet_HP</thingDef>
+                        <countRange>117~156</countRange>
+                    </li>
+                </subOptionsChooseOne>
+            </inventoryOptions>
+        </value>
+    </Operation>
+
+    <!-- ====================================================== -->
+    <!-- Locust Drone Guard                                     -->
+    <!-- Hammerburst Mk I only                                  -->
+    <!-- ====================================================== -->
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/PawnKindDef[defName="GOW_Locust_Fighter_DroneGuard"]/weaponTags</xpath>
+        <value>
+            <weaponTags>
+                <li>LocustHammerburst</li>
+                <li>Locustsidearm</li>
+            </weaponTags>
+        </value>
+    </Operation>
+
+    <!-- Hammerburst costs at least 625; prevent weaponless spawns. -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/PawnKindDef[defName="GOW_Locust_Fighter_DroneGuard"]/weaponMoney</xpath>
+        <value>
+            <weaponMoney>650~850</weaponMoney>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/PawnKindDef[defName="GOW_Locust_Fighter_DroneGuard"]</xpath>
+        <value>
+            <inventoryOptions>
+                <skipChance>0</skipChance>
+
+                <subOptionsChooseOne>
+                    <li>
+                        <choiceChance>70</choiceChance>
+                        <thingDef>Ammo_762x39mmSoviet_FMJ</thingDef>
+                        <countRange>117~156</countRange>
+                    </li>
+
+                    <li>
+                        <choiceChance>20</choiceChance>
+                        <thingDef>Ammo_762x39mmSoviet_AP</thingDef>
+                        <countRange>78~117</countRange>
+                    </li>
+
+                    <li>
+                        <choiceChance>10</choiceChance>
+                        <thingDef>Ammo_762x39mmSoviet_HP</thingDef>
+                        <countRange>117~156</countRange>
+                    </li>
+                </subOptionsChooseOne>
+            </inventoryOptions>
+        </value>
+    </Operation>
+
+    <!-- ====================================================== -->
+    <!-- Locust Beastrider                                      -->
+    <!-- Hammerburst Mk I only                                  -->
+    <!-- ====================================================== -->
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/PawnKindDef[defName="GOW_Locust_Fighter_Beastrider"]/weaponTags</xpath>
+        <value>
+            <weaponTags>
+                <li>LocustHammerburst</li>
+                <li>Locustsidearm</li>
+            </weaponTags>
+        </value>
+    </Operation>
+
+    <!-- Hammerburst costs at least 625; prevent weaponless spawns. -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/PawnKindDef[defName="GOW_Locust_Fighter_Beastrider"]/weaponMoney</xpath>
+        <value>
+            <weaponMoney>650~800</weaponMoney>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/PawnKindDef[defName="GOW_Locust_Fighter_Beastrider"]</xpath>
+        <value>
+            <inventoryOptions>
+                <skipChance>0</skipChance>
+
+                <subOptionsChooseOne>
+                    <li>
+                        <choiceChance>75</choiceChance>
+                        <thingDef>Ammo_762x39mmSoviet_FMJ</thingDef>
+                        <countRange>117~156</countRange>
+                    </li>
+
+                    <li>
+                        <choiceChance>15</choiceChance>
+                        <thingDef>Ammo_762x39mmSoviet_AP</thingDef>
+                        <countRange>78~117</countRange>
+                    </li>
+
+                    <li>
+                        <choiceChance>10</choiceChance>
+                        <thingDef>Ammo_762x39mmSoviet_HP</thingDef>
+                        <countRange>117~156</countRange>
+                    </li>
+                </subOptionsChooseOne>
+            </inventoryOptions>
+        </value>
+    </Operation>
+
+    <!-- ====================================================== -->
+    <!-- Locust Bolter                                          -->
+    <!-- Gorgon: 7.62x39 Soviet ammo                            -->
+    <!-- ====================================================== -->
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/PawnKindDef[defName="GOW_Locust_Fighter_Bolter"]</xpath>
+        <value>
+            <inventoryOptions>
+                <skipChance>0</skipChance>
+
+                <subOptionsChooseOne>
+                    <li>
+                        <choiceChance>65</choiceChance>
+                        <thingDef>Ammo_762x39mmSoviet_FMJ</thingDef>
+                        <countRange>48~64</countRange>
+                    </li>
+
+                    <li>
+                        <choiceChance>20</choiceChance>
+                        <thingDef>Ammo_762x39mmSoviet_AP</thingDef>
+                        <countRange>48~64</countRange>
+                    </li>
+
+                    <li>
+                        <choiceChance>15</choiceChance>
+                        <thingDef>Ammo_762x39mmSoviet_HP</thingDef>
+                        <countRange>48~64</countRange>
+                    </li>
+                </subOptionsChooseOne>
+            </inventoryOptions>
+        </value>
+    </Operation>
+
+    <!-- ====================================================== -->
+    <!-- Locust Boomer                                          -->
+    <!-- Boomshot 50 mm ammunition                              -->
+    <!-- ====================================================== -->
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/PawnKindDef[defName="GOW_Locust_Fighter_Boomer"]</xpath>
+        <value>
+            <inventoryOptions>
+                <skipChance>0</skipChance>
+
+                <subOptionsChooseOne>
+                    <!-- Standard Boomer combat load -->
+                    <li>
+                        <choiceChance>85</choiceChance>
+                        <thingDef>Ammo_GOW_Boomshot50mm_HE</thingDef>
+                        <countRange>3</countRange>
+                    </li>
+
+                    <!-- Uncommon anti-mech/electronics ammunition -->
+                    <li>
+                        <choiceChance>10</choiceChance>
+                        <thingDef>Ammo_GOW_Boomshot50mm_EMP</thingDef>
+                        <countRange>2</countRange>
+                    </li>
+
+                    <!-- Rare tactical smoke ammunition -->
+                    <li>
+                        <choiceChance>5</choiceChance>
+                        <thingDef>Ammo_GOW_Boomshot50mm_Smoke</thingDef>
+                        <countRange>2</countRange>
+                    </li>
+                </subOptionsChooseOne>
+            </inventoryOptions>
+        </value>
+    </Operation>
+
+    <!-- ====================================================== -->
+    <!-- Locust Boomer Guard                                    -->
+    <!-- Boomshot 50 mm ammunition                              -->
+    <!-- ====================================================== -->
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/PawnKindDef[defName="GOW_Locust_Fighter_BoomerGuard"]</xpath>
+        <value>
+            <inventoryOptions>
+                <skipChance>0</skipChance>
+
+                <subOptionsChooseOne>
+                    <li>
+                        <choiceChance>85</choiceChance>
+                        <thingDef>Ammo_GOW_Boomshot50mm_HE</thingDef>
+                        <countRange>3</countRange>
+                    </li>
+
+                    <li>
+                        <choiceChance>10</choiceChance>
+                        <thingDef>Ammo_GOW_Boomshot50mm_EMP</thingDef>
+                        <countRange>2</countRange>
+                    </li>
+
+                    <li>
+                        <choiceChance>5</choiceChance>
+                        <thingDef>Ammo_GOW_Boomshot50mm_Smoke</thingDef>
+                        <countRange>2</countRange>
+                    </li>
+                </subOptionsChooseOne>
+            </inventoryOptions>
+        </value>
+    </Operation>
+
+    <!-- ====================================================== -->
+    <!-- Locust Kantus                                          -->
+    <!-- Boltok: .45-70 ammo                                    -->
+    <!-- ====================================================== -->
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/PawnKindDef[defName="GOW_Locust_Fighter_Kantus"]</xpath>
+        <value>
+            <inventoryOptions>
+                <skipChance>0</skipChance>
+
+                <subOptionsChooseOne>
+                    <li>
+                        <choiceChance>60</choiceChance>
+                        <thingDef>Ammo_4570Gov_FMJ</thingDef>
+                        <countRange>12~18</countRange>
+                    </li>
+
+                    <li>
+                        <choiceChance>25</choiceChance>
+                        <thingDef>Ammo_4570Gov_AP</thingDef>
+                        <countRange>12~18</countRange>
+                    </li>
+
+                    <li>
+                        <choiceChance>15</choiceChance>
+                        <thingDef>Ammo_4570Gov_HP</thingDef>
+                        <countRange>12~18</countRange>
+                    </li>
+                </subOptionsChooseOne>
+            </inventoryOptions>
+        </value>
+    </Operation>
+
+    <!-- ====================================================== -->
+    <!-- Locust Kantus Acolyte                                  -->
+    <!-- Boltok ammunition if the elite sidearm is selected     -->
+    <!-- ====================================================== -->
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/PawnKindDef[defName="GOW_Locust_Fighter_KantusAcolyte"]</xpath>
+        <value>
+            <inventoryOptions>
+                <skipChance>0</skipChance>
+
+                <subOptionsChooseOne>
+                    <li>
+                        <choiceChance>70</choiceChance>
+                        <thingDef>Ammo_4570Gov_FMJ</thingDef>
+                        <countRange>12~18</countRange>
+                    </li>
+
+                    <li>
+                        <choiceChance>20</choiceChance>
+                        <thingDef>Ammo_4570Gov_AP</thingDef>
+                        <countRange>12~18</countRange>
+                    </li>
+
+                    <li>
+                        <choiceChance>10</choiceChance>
+                        <thingDef>Ammo_4570Gov_HP</thingDef>
+                        <countRange>12~18</countRange>
+                    </li>
+                </subOptionsChooseOne>
+            </inventoryOptions>
+        </value>
+    </Operation>
+
+    <!-- ====================================================== -->
+    <!-- Locust Theron Guard                                    -->
+    <!-- May spawn with Hammerburst Mk II, Torque Bow, or       -->
+    <!-- Gnasher. Carry a modest compatible reserve for all.    -->
+    <!-- ====================================================== -->
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/PawnKindDef[defName="GOW_Locust_Fighter_Theron"]</xpath>
+        <value>
+            <inventoryOptions>
+                <skipChance>0</skipChance>
+
+                <subOptionsTakeAll>
+
+                    <!-- Hammerburst Mk II: 20-round magazine. -->
+                    <li>
+                        <thingDef>Ammo_762x39mmSoviet_FMJ</thingDef>
+                        <countRange>40</countRange>
+                    </li>
+
+                    <li>
+                        <thingDef>Ammo_762x39mmSoviet_AP</thingDef>
+                        <countRange>20</countRange>
+                    </li>
+
+                    <!-- Torque Bow: one bolt loaded at a time. -->
+                    <li>
+                        <thingDef>Ammo_GOW_TorqueBolt</thingDef>
+                        <countRange>3</countRange>
+                    </li>
+
+                    <!-- Gnasher: 8-shell magazine. -->
+                    <li>
+                        <thingDef>Ammo_10Gauge_Buck</thingDef>
+                        <countRange>16</countRange>
+                    </li>
+
+                </subOptionsTakeAll>
+            </inventoryOptions>
+        </value>
+    </Operation>
+
+</Patch>

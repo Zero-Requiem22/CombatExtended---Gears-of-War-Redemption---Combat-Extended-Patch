@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <!-- ====================================================== -->
+    <!-- Locust Hammerburst Mk I                               -->
+    <!-- ====================================================== -->
+
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>Gun_GOW_Hammerburst</defName>
+        <statBases>
+            <WorkToMake>43750</WorkToMake>
+            <Mass>5.0</Mass>
+            <Bulk>5.5</Bulk>
+            <SwayFactor>1.05</SwayFactor>
+            <ShotSpread>0.090</ShotSpread>
+            <SightsEfficiency>0.82</SightsEfficiency>
+            <RangedWeapon_Cooldown>0.55</RangedWeapon_Cooldown>
+        </statBases>
+        <costList>
+            <Steel>95</Steel>
+            <ComponentIndustrial>9</ComponentIndustrial>
+        </costList>
+        <Properties>
+            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+            <hasStandardCommand>true</hasStandardCommand>
+            <defaultProjectile>Bullet_762x39mmSoviet_FMJ</defaultProjectile>
+            <burstShotCount>6</burstShotCount>
+            <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+            <warmupTime>1.10</warmupTime>
+            <range>35</range>
+            <soundCast>Shot_GOW_MK2Hammerburst</soundCast>
+            <soundCastTail>GunTail_Medium</soundCastTail>
+            <muzzleFlashScale>9</muzzleFlashScale>
+            <recoilAmount>1.05</recoilAmount>
+        </Properties>
+        <AmmoUser>
+            <magazineSize>78</magazineSize>
+            <reloadTime>4.8</reloadTime>
+            <ammoSet>AmmoSet_762x39mmSoviet</ammoSet>
+        </AmmoUser>
+        <FireModes>
+            <aiUseBurstMode>true</aiUseBurstMode>
+            <aiAimMode>AimedShot</aiAimMode>
+            <aimedBurstShotCount>3</aimedBurstShotCount>
+        </FireModes>
+        <weaponTags>
+            <li>CE_AI_AssaultWeapon</li>
+            <li>CE_AI_Rifle</li>
+        </weaponTags>
+    </Operation>
+
+    <!-- Melee -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Gun_GOW_Hammerburst"]/tools</xpath>
+        <value>
+            <tools>
+                <li Class="CombatExtended.ToolCE">
+                    <label>stock</label>
+                    <capacities>
+                        <li>Blunt</li>
+                    </capacities>
+                    <power>10</power>
+                    <cooldownTime>2.0</cooldownTime>
+                    <armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+                </li>
+
+                <li Class="CombatExtended.ToolCE">
+                    <label>barrel</label>
+                    <capacities>
+                        <li>Blunt</li>
+                        <li>Poke</li>
+                    </capacities>
+                    <power>10</power>
+                    <cooldownTime>2.0</cooldownTime>
+                    <armorPenetrationBlunt>0.9</armorPenetrationBlunt>
+                    <armorPenetrationSharp>0.4</armorPenetrationSharp>
+                </li>
+            </tools>
+        </value>
+    </Operation>
+
+    <!-- ====================================================== -->
+    <!-- Locust Hammerburst Mk II                              -->
+    <!-- ====================================================== -->
+
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>Gun_GOW_HammerburstTwo</defName>
+        <statBases>
+            <WorkToMake>46500</WorkToMake>
+            <Mass>5.5</Mass>
+            <Bulk>5.8</Bulk>
+            <SwayFactor>0.70</SwayFactor>
+            <ShotSpread>0.045</ShotSpread>
+            <SightsEfficiency>1.12</SightsEfficiency>
+            <RangedWeapon_Cooldown>0.75</RangedWeapon_Cooldown>
+        </statBases>
+        <costList>
+            <Steel>110</Steel>
+            <ComponentIndustrial>9</ComponentIndustrial>
+        </costList>
+        <Properties>
+            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+            <hasStandardCommand>true</hasStandardCommand>
+            <defaultProjectile>Bullet_762x39mmSoviet_FMJ</defaultProjectile>
+            <burstShotCount>3</burstShotCount>
+            <ticksBetweenBurstShots>9</ticksBetweenBurstShots>
+
+            <warmupTime>1.10</warmupTime>
+            <range>42</range>
+            <soundCast>Shot_GOW_MK2Hammerburst</soundCast>
+            <soundCastTail>GunTail_Medium</soundCastTail>
+            <muzzleFlashScale>9</muzzleFlashScale>
+            <recoilAmount>0.80</recoilAmount>
+        </Properties>
+        <AmmoUser>
+            <magazineSize>20</magazineSize>
+            <reloadTime>2.5</reloadTime>
+            <ammoSet>AmmoSet_762x39mmSoviet</ammoSet>
+        </AmmoUser>
+        <FireModes>
+            <aiUseBurstMode>true</aiUseBurstMode>
+            <aiAimMode>AimedShot</aiAimMode>
+            <aimedBurstShotCount>2</aimedBurstShotCount>
+        </FireModes>
+        <weaponTags>
+            <li>CE_AI_AssaultWeapon</li>
+            <li>CE_AI_Rifle</li>
+        </weaponTags>
+    </Operation>
+
+    <!--Melee -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Gun_GOW_HammerburstTwo"]/tools</xpath>
+        <value>
+            <tools>
+                <li Class="CombatExtended.ToolCE">
+                    <label>stock</label>
+                    <capacities>
+                        <li>Blunt</li>
+                    </capacities>
+                    <power>10</power>
+                    <cooldownTime>2.0</cooldownTime>
+                    <armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+                </li>
+
+                <li Class="CombatExtended.ToolCE">
+                    <label>barrel</label>
+                    <capacities>
+                        <li>Blunt</li>
+                        <li>Poke</li>
+                    </capacities>
+                    <power>10</power>
+                    <cooldownTime>2.0</cooldownTime>
+                    <armorPenetrationBlunt>0.9</armorPenetrationBlunt>
+                    <armorPenetrationSharp>0.4</armorPenetrationSharp>
+                </li>
+            </tools>
+        </value>
+    </Operation>
+
+    <!-- ====================================================== -->
+    <!-- Locust Gorgon SMG / Burst Pistol                       -->
+    <!-- ====================================================== -->
+
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>Gun_GOW_Gorgon</defName>
+        <statBases>
+            <WorkToMake>8950</WorkToMake>
+            <Mass>2.9</Mass>
+            <Bulk>2.8</Bulk>
+            <SwayFactor>0.90</SwayFactor>
+            <ShotSpread>0.130</ShotSpread>
+            <SightsEfficiency>0.65</SightsEfficiency>
+            <RangedWeapon_Cooldown>0.85</RangedWeapon_Cooldown>
+        </statBases>
+        <costList>
+            <Steel>65</Steel>
+            <ComponentIndustrial>2</ComponentIndustrial>
+        </costList>
+        <Properties>
+            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+            <hasStandardCommand>true</hasStandardCommand>
+            <defaultProjectile>Bullet_762x39mmSoviet_FMJ</defaultProjectile>
+            <burstShotCount>8</burstShotCount>
+            <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+            <warmupTime>0.45</warmupTime>
+            <range>25</range>
+            <soundCast>Shot_GOW_Gorgon</soundCast>
+            <soundCastTail>GunTail_Light</soundCastTail>
+            <muzzleFlashScale>9</muzzleFlashScale>
+            <recoilAmount>1.40</recoilAmount>
+        </Properties>
+        <AmmoUser>
+            <magazineSize>32</magazineSize>
+            <reloadTime>2.8</reloadTime>
+            <ammoSet>AmmoSet_762x39mmSoviet_SB</ammoSet>
+        </AmmoUser>
+        <FireModes>
+            <aiUseBurstMode>true</aiUseBurstMode>
+            <aiAimMode>AimedShot</aiAimMode>
+            <aimedBurstShotCount>4</aimedBurstShotCount>
+        </FireModes>
+
+        <weaponTags>
+            <li>CE_Sidearm</li>
+            <li>CE_AI_Pistol</li>
+            <li>CE_OneHandedWeapon</li>
+        </weaponTags>
+    </Operation>
+
+    <!-- Melee -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Gun_GOW_Gorgon"]/tools</xpath>
+        <value>
+            <tools>
+                <li Class="CombatExtended.ToolCE">
+                    <label>grip</label>
+                    <capacities>
+                        <li>Blunt</li>
+                    </capacities>
+                    <power>8</power>
+                    <cooldownTime>1.8</cooldownTime>
+                    <armorPenetrationBlunt>0.8</armorPenetrationBlunt>
+                </li>
+            </tools>
+        </value>
+    </Operation>
+
+    <!-- ====================================================== -->
+    <!-- Locust Boltok Hand Cannon                              -->
+    <!-- ====================================================== -->
+
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>Gun_GOW_Boltok</defName>
+
+        <statBases>
+            <WorkToMake>7250</WorkToMake>
+            <Mass>2.65</Mass>
+            <Bulk>2.4</Bulk>
+            <SwayFactor>0.72</SwayFactor>
+            <ShotSpread>0.050</ShotSpread>
+            <SightsEfficiency>1.05</SightsEfficiency>
+            <RangedWeapon_Cooldown>0.80</RangedWeapon_Cooldown>
+        </statBases>
+        <costList>
+            <Steel>70</Steel>
+            <ComponentIndustrial>2</ComponentIndustrial>
+        </costList>
+        <Properties>
+            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+            <hasStandardCommand>true</hasStandardCommand>
+            <defaultProjectile>Bullet_4570Gov_FMJ</defaultProjectile>
+            <warmupTime>0.30</warmupTime>
+            <range>30</range>
+
+            <soundCast>Shot_GOW_Boltok</soundCast>
+            <soundCastTail>GunTail_Light</soundCastTail>
+            <muzzleFlashScale>9</muzzleFlashScale>
+            <recoilAmount>1.70</recoilAmount>
+        </Properties>
+        <AmmoUser>
+            <magazineSize>6</magazineSize>
+            <reloadTime>3.2</reloadTime>
+            <ammoSet>AmmoSet_4570Gov_SB</ammoSet>
+        </AmmoUser>
+        <FireModes>
+            <aiAimMode>AimedShot</aiAimMode>
+        </FireModes>
+        <weaponTags>
+            <li>CE_Sidearm</li>
+            <li>CE_AI_Pistol</li>
+            <li>CE_OneHandedWeapon</li>
+        </weaponTags>
+    </Operation>
+
+    <!-- Melee -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Gun_GOW_Boltok"]/tools</xpath>
+        <value>
+            <tools>
+                <li Class="CombatExtended.ToolCE">
+                    <label>grip</label>
+                    <capacities>
+                        <li>Blunt</li>
+                    </capacities>
+                    <power>8</power>
+                    <cooldownTime>1.85</cooldownTime>
+                    <armorPenetrationBlunt>0.9</armorPenetrationBlunt>
+                </li>
+            </tools>
+        </value>
+    </Operation>
+
+</Patch>
