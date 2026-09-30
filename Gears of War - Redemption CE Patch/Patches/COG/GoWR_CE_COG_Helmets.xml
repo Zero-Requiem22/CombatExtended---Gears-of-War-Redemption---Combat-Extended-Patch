@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <!-- ====================================================== -->
+    <!-- Standard COG Combat Helmet                             -->
+    <!-- ====================================================== -->
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Apparel_GOW_CoghelmA"]/statBases</xpath>
+        <value>
+            <Bulk>1.5</Bulk>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Apparel_GOW_CoghelmA"]/statBases/MaxHitPoints</xpath>
+        <value>
+            <MaxHitPoints>260</MaxHitPoints>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Apparel_GOW_CoghelmA"]/statBases/ArmorRating_Sharp</xpath>
+        <value>
+            <ArmorRating_Sharp>12.0</ArmorRating_Sharp>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Apparel_GOW_CoghelmA"]/statBases/ArmorRating_Blunt</xpath>
+        <value>
+            <ArmorRating_Blunt>18.0</ArmorRating_Blunt>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Apparel_GOW_CoghelmA"]/statBases/ArmorRating_Heat</xpath>
+        <value>
+            <ArmorRating_Heat>0.15</ArmorRating_Heat>
+        </value>
+    </Operation>
+
+    <!-- ====================================================== -->
+    <!-- Original Onyx Guard Helmet                             -->
+    <!-- ====================================================== -->
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Apparel_GOW_OnyxGuardhelmA"]/statBases</xpath>
+        <value>
+            <Bulk>1.8</Bulk>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Apparel_GOW_OnyxGuardhelmA"]/statBases/MaxHitPoints</xpath>
+        <value>
+            <MaxHitPoints>320</MaxHitPoints>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Apparel_GOW_OnyxGuardhelmA"]/statBases/ArmorRating_Sharp</xpath>
+        <value>
+            <ArmorRating_Sharp>16.0</ArmorRating_Sharp>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Apparel_GOW_OnyxGuardhelmA"]/statBases/ArmorRating_Blunt</xpath>
+        <value>
+            <ArmorRating_Blunt>23.0</ArmorRating_Blunt>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Apparel_GOW_OnyxGuardhelmA"]/statBases/ArmorRating_Heat</xpath>
+        <value>
+            <ArmorRating_Heat>0.22</ArmorRating_Heat>
+        </value>
+    </Operation>
+
+    <!-- ====================================================== -->
+    <!-- Post-Locust-War Onyx Guard Helmet                      -->
+    <!-- ====================================================== -->
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Apparel_GOW_NewOnyxGuardhelmA"]/statBases</xpath>
+        <value>
+            <Bulk>2.0</Bulk>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Apparel_GOW_NewOnyxGuardhelmA"]/statBases/MaxHitPoints</xpath>
+        <value>
+            <MaxHitPoints>380</MaxHitPoints>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Apparel_GOW_NewOnyxGuardhelmA"]/statBases/ArmorRating_Sharp</xpath>
+        <value>
+            <ArmorRating_Sharp>19.0</ArmorRating_Sharp>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Apparel_GOW_NewOnyxGuardhelmA"]/statBases/ArmorRating_Blunt</xpath>
+        <value>
+            <ArmorRating_Blunt>27.0</ArmorRating_Blunt>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Apparel_GOW_NewOnyxGuardhelmA"]/statBases/ArmorRating_Heat</xpath>
+        <value>
+            <ArmorRating_Heat>0.28</ArmorRating_Heat>
+        </value>
+    </Operation>
+
+    <!-- ====================================================== -->
+    <!-- COG Bandana                                            -->
+    <!-- ====================================================== -->
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Apparel_GOW_Cogbandana"]/statBases</xpath>
+        <value>
+            <Bulk>0.0</Bulk>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Apparel_GOW_Cogbandana"]/statBases/MaxHitPoints</xpath>
+        <value>
+            <MaxHitPoints>120</MaxHitPoints>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Apparel_GOW_Cogbandana"]/statBases/ArmorRating_Sharp</xpath>
+        <value>
+            <ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Apparel_GOW_Cogbandana"]/statBases/ArmorRating_Blunt</xpath>
+        <value>
+            <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Apparel_GOW_Cogbandana"]/statBases/ArmorRating_Heat</xpath>
+        <value>
+            <ArmorRating_Heat>0.03</ArmorRating_Heat>
+        </value>
+    </Operation>
+
+</Patch>

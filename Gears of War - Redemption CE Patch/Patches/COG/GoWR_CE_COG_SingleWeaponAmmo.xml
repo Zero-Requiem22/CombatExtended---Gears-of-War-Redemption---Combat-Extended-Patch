@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <!-- ====================================================== -->
+    <!-- COG Gear Sniper                                        -->
+    <!-- Longshot: .338 Lapua                                   -->
+    <!-- ====================================================== -->
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/PawnKindDef[defName="GOW_COG_Sniper_Gear"]</xpath>
+        <value>
+            <inventoryOptions>
+                <skipChance>0</skipChance>
+
+                <subOptionsChooseOne>
+                    <li>
+                        <choiceChance>55</choiceChance>
+                        <thingDef>Ammo_338Lapua_FMJ</thingDef>
+                        <countRange>4~6</countRange>
+                    </li>
+
+                    <li>
+                        <choiceChance>35</choiceChance>
+                        <thingDef>Ammo_338Lapua_AP</thingDef>
+                        <countRange>3~5</countRange>
+                    </li>
+
+                    <li>
+                        <choiceChance>10</choiceChance>
+                        <thingDef>Ammo_338Lapua_HE</thingDef>
+                        <countRange>4~6</countRange>
+                    </li>
+                </subOptionsChooseOne>
+            </inventoryOptions>
+        </value>
+    </Operation>
+
+    <!-- ====================================================== -->
+    <!-- COG Supply Officer                                     -->
+    <!-- Snub Pistol: 10 mm Auto                                -->
+    <!-- Preserve original silver.                              -->
+    <!-- ====================================================== -->
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/PawnKindDef[defName="GOW_COG_Trader"]/inventoryOptions</xpath>
+        <value>
+            <inventoryOptions>
+                <skipChance>0</skipChance>
+
+                <subOptionsTakeAll>
+                    <li>
+                        <thingDef>Silver</thingDef>
+                        <countRange>100~150</countRange>
+                    </li>
+                </subOptionsTakeAll>
+
+                <subOptionsChooseOne>
+                    <li>
+                        <choiceChance>70</choiceChance>
+                        <thingDef>Ammo_10mmAuto_FMJ</thingDef>
+                        <countRange>24~36</countRange>
+                    </li>
+
+                    <li>
+                        <choiceChance>20</choiceChance>
+                        <thingDef>Ammo_10mmAuto_AP</thingDef>
+                        <countRange>18~24</countRange>
+                    </li>
+
+                    <li>
+                        <choiceChance>10</choiceChance>
+                        <thingDef>Ammo_10mmAuto_HP</thingDef>
+                        <countRange>24~36</countRange>
+                    </li>
+                </subOptionsChooseOne>
+            </inventoryOptions>
+        </value>
+    </Operation>
+
+    <!-- ====================================================== -->
+    <!-- COG Chairman                                           -->
+    <!-- Snub Pistol: 10 mm Auto                                -->
+    <!-- ====================================================== -->
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/PawnKindDef[defName="COG_Fighter_FactionLeader"]</xpath>
+        <value>
+            <inventoryOptions>
+                <skipChance>0</skipChance>
+
+                <subOptionsChooseOne>
+                    <li>
+                        <choiceChance>50</choiceChance>
+                        <thingDef>Ammo_10mmAuto_FMJ</thingDef>
+                        <countRange>24~36</countRange>
+                    </li>
+
+                    <li>
+                        <choiceChance>35</choiceChance>
+                        <thingDef>Ammo_10mmAuto_AP</thingDef>
+                        <countRange>18~24</countRange>
+                    </li>
+
+                    <li>
+                        <choiceChance>15</choiceChance>
+                        <thingDef>Ammo_10mmAuto_HP</thingDef>
+                        <countRange>24~36</countRange>
+                    </li>
+                </subOptionsChooseOne>
+            </inventoryOptions>
+        </value>
+    </Operation>
+
+</Patch>

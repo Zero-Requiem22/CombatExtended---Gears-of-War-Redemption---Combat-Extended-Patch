@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- CE ammo category for Torque Bow ammunition. -->
+    <CombatExtended.AmmoCategoryDef>
+        <defName>ExplosiveBolt</defName>
+        <label>explosive bolt</label>
+    </CombatExtended.AmmoCategoryDef>
+
+    <!-- Ammo Set -->
+    <CombatExtended.AmmoSetDef>
+        <defName>AmmoSet_GOW_TorqueBow</defName>
+        <label>torque bolts</label>
+
+        <ammoTypes>
+            <Ammo_GOW_TorqueBolt>GOW_CE_TorqueBolt</Ammo_GOW_TorqueBolt>
+        </ammoTypes>
+    </CombatExtended.AmmoSetDef>
+
+    <!-- Physcial Ammo -->
+    <ThingDef Class="CombatExtended.AmmoDef" Name="GOW_TorqueBoltBase" ParentName="MediumAmmoBase" Abstract="True">
+        <description>An explosive coilgun bolt for the Locust Torque Bow.</description>
+        <statBases>
+            <Mass>0.25</Mass>
+            <Bulk>0.20</Bulk>
+        </statBases>
+        <tradeTags>
+            <li>CE_AutoEnableTrade</li>
+            <li>CE_AutoEnableCrafting</li>
+        </tradeTags>
+        <stackLimit>50</stackLimit>
+    </ThingDef>
+
+    <ThingDef Class="CombatExtended.AmmoDef" ParentName="GOW_TorqueBoltBase">
+        <defName>Ammo_GOW_TorqueBolt</defName>
+        <label>torque bolt</label>
+
+        <graphicData>
+            <texPath>Things/Ammo/Bolt/TorqueBow</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+
+        <ammoClass>ExplosiveBolt</ammoClass>
+        <cookOffProjectile>GOW_CE_TorqueBolt</cookOffProjectile>
+    </ThingDef>
+
+    <!-- Projectile -->
+    <ThingDef ParentName="BaseBulletCE">
+        <defName>GOW_CE_TorqueBolt</defName>
+        <label>torque bolt</label>
+
+        <graphicData>
+            <texPath>Things/Projectile/GOW_TorquebowShot</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>TransparentPostLight</shaderType>
+            <drawSize>1</drawSize>
+        </graphicData>
+        
+        <projectile Class="CombatExtended.ProjectilePropertiesCE">
+            <damageDef>Bomb</damageDef>
+            <damageAmountBase>35</damageAmountBase>
+            <armorPenetrationSharp>18</armorPenetrationSharp>
+            <armorPenetrationBlunt>90</armorPenetrationBlunt>
+            <explosionRadius>2.2</explosionRadius>
+            <speed>75</speed>
+            <soundImpact>Shot_GOW_TorqueBow</soundImpact>
+            <dropsCasings>false</dropsCasings>
+        </projectile>
+    </ThingDef>
+
+    <!-- Recipe -->
+    <RecipeDef ParentName="AdvancedAmmoRecipeBase">
+        <defName>MakeAmmo_GOW_TorqueBolt</defName>
+        <label>make torque bolts x5</label>
+        <description>Craft 5 explosive bolts for a Torque Bow.</description>
+        <jobString>Making torque bolts.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>20</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Chemfuel</li>
+                    </thingDefs>
+                </filter>
+                <count>8</count>
+            </li>
+        </ingredients>
+        <products>
+            <Ammo_GOW_TorqueBolt>5</Ammo_GOW_TorqueBolt>
+        </products>
+        <workAmount>1800</workAmount>
+    </RecipeDef>
+</Defs>

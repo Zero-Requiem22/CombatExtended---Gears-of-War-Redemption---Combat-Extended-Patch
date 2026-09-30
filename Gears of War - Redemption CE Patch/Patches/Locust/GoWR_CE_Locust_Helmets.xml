@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <!-- ====================================================== -->
+    <!-- Locust Beastrider Helmet                               -->
+    <!-- Light full-head riding and hunting helmet              -->
+    <!-- ====================================================== -->
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Apparel_GOW_BeastriderHelm"]/statBases</xpath>
+        <value>
+            <Bulk>1.0</Bulk>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Apparel_GOW_BeastriderHelm"]/statBases/MaxHitPoints</xpath>
+        <value>
+            <MaxHitPoints>230</MaxHitPoints>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Apparel_GOW_BeastriderHelm"]/statBases/ArmorRating_Sharp</xpath>
+        <value>
+            <ArmorRating_Sharp>4.0</ArmorRating_Sharp>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Apparel_GOW_BeastriderHelm"]/statBases/ArmorRating_Blunt</xpath>
+        <value>
+            <ArmorRating_Blunt>9.0</ArmorRating_Blunt>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Apparel_GOW_BeastriderHelm"]/statBases/ArmorRating_Heat</xpath>
+        <value>
+            <ArmorRating_Heat>0.10</ArmorRating_Heat>
+        </value>
+    </Operation>
+
+    <!-- ====================================================== -->
+    <!-- Locust Theron Helmet                                   -->
+    <!-- Elite plated full-head guard helmet                    -->
+    <!-- ====================================================== -->
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Apparel_GOW_TheronHelm"]/statBases</xpath>
+        <value>
+            <Bulk>1.5</Bulk>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Apparel_GOW_TheronHelm"]/statBases/MaxHitPoints</xpath>
+        <value>
+            <MaxHitPoints>310</MaxHitPoints>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Apparel_GOW_TheronHelm"]/statBases/ArmorRating_Sharp</xpath>
+        <value>
+            <ArmorRating_Sharp>9.0</ArmorRating_Sharp>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Apparel_GOW_TheronHelm"]/statBases/ArmorRating_Blunt</xpath>
+        <value>
+            <ArmorRating_Blunt>15.0</ArmorRating_Blunt>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Apparel_GOW_TheronHelm"]/statBases/ArmorRating_Heat</xpath>
+        <value>
+            <ArmorRating_Heat>0.18</ArmorRating_Heat>
+        </value>
+    </Operation>
+
+    <!-- Replace partial UpperHead + Eyes coverage with FullHead. -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Apparel_GOW_TheronHelm"]/apparel/bodyPartGroups</xpath>
+        <value>
+            <bodyPartGroups>
+                <li>FullHead</li>
+            </bodyPartGroups>
+        </value>
+    </Operation>
+
+    <!-- ====================================================== -->
+    <!-- Locust Kantus Helmet                                   -->
+    <!-- Ornate UpperHead priestly helmet                       -->
+    <!-- ====================================================== -->
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Apparel_GOW_KantusHelm"]/statBases</xpath>
+        <value>
+            <Bulk>0.8</Bulk>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Apparel_GOW_KantusHelm"]/statBases/MaxHitPoints</xpath>
+        <value>
+            <MaxHitPoints>260</MaxHitPoints>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Apparel_GOW_KantusHelm"]/statBases/ArmorRating_Sharp</xpath>
+        <value>
+            <ArmorRating_Sharp>4.5</ArmorRating_Sharp>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Apparel_GOW_KantusHelm"]/statBases/ArmorRating_Blunt</xpath>
+        <value>
+            <ArmorRating_Blunt>8.0</ArmorRating_Blunt>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Apparel_GOW_KantusHelm"]/statBases/ArmorRating_Heat</xpath>
+        <value>
+            <ArmorRating_Heat>0.12</ArmorRating_Heat>
+        </value>
+    </Operation>
+
+</Patch>

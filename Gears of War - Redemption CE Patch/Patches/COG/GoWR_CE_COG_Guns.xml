@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <!-- ====================================================== -->
+    <!-- COG MK1 / Retro Lancer                                -->
+    <!-- ====================================================== -->
+
+    <!-- Convert the Retro Lancer into a CE-compatible,
+         full-power .30-06 assault/battle rifle. -->
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>Gun_GOW_RetroLancer</defName>
+        <statBases>
+            <WorkToMake>41250</WorkToMake>
+            <Mass>4.8</Mass>
+            <Bulk>5.2</Bulk>
+            <SwayFactor>1.25</SwayFactor>
+            <ShotSpread>0.11</ShotSpread>
+            <SightsEfficiency>0.75</SightsEfficiency>
+            <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+        </statBases>
+        <costList>
+            <Steel>75</Steel>
+            <ComponentIndustrial>8</ComponentIndustrial>
+        </costList>
+        <Properties>
+            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+            <hasStandardCommand>true</hasStandardCommand>
+            <defaultProjectile>Bullet_3006Springfield_FMJ</defaultProjectile>
+            <burstShotCount>4</burstShotCount>
+            <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+            <warmupTime>1.1</warmupTime>
+            <range>34</range>
+            <soundCast>Shot_GOW_MK1Lancer</soundCast>
+            <soundCastTail>GunTail_Medium</soundCastTail>
+            <muzzleFlashScale>9</muzzleFlashScale>
+            <recoilAmount>1.65</recoilAmount>
+        </Properties>
+        <AmmoUser>
+            <magazineSize>20</magazineSize>
+            <reloadTime>3.5</reloadTime>
+            <ammoSet>AmmoSet_3006Springfield</ammoSet>
+        </AmmoUser>
+        <FireModes>
+            <aiUseBurstMode>true</aiUseBurstMode>
+            <aiAimMode>AimedShot</aiAimMode>
+            <aimedBurstShotCount>2</aimedBurstShotCount>
+        </FireModes>
+        <weaponTags>
+            <li>CE_AI_AssaultWeapon</li>
+            <li>CE_AI_Rifle</li>
+            <li>IndustrialGunAdvanced</li>
+        </weaponTags>
+    </Operation>
+
+    <!-- Replace the source mod's vanilla stock/bayonet melee tools with CE-compatible melee tools. -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Gun_GOW_RetroLancer"]/tools</xpath>
+        <value>
+            <tools>
+                <li Class="CombatExtended.ToolCE">
+                    <label>stock</label>
+                    <capacities>
+                        <li>Blunt</li>
+                    </capacities>
+                    <power>10</power>
+                    <cooldownTime>1.8</cooldownTime>
+                    <armorPenetrationBlunt>1.25</armorPenetrationBlunt>
+                </li>
+
+                <!-- Main melee identity: a strong, slower fixed bayonet. -->
+                <li Class="CombatExtended.ToolCE">
+                    <label>long bayonet</label>
+                    <capacities>
+                        <li>Stab</li>
+                        <li>Cut</li>
+                    </capacities>
+                    <power>19</power>
+                    <cooldownTime>1.35</cooldownTime>
+                    <armorPenetrationSharp>4.0</armorPenetrationSharp>
+                    <chanceFactor>3.0</chanceFactor>
+                    <soundMeleeHit>Shot_GOW_RetroLancerHit</soundMeleeHit>
+                </li>
+            </tools>
+        </value>
+    </Operation>
+
+    <!-- ========================================================== -->
+    <!-- COG MK2 Lancer Assault Rifle                              -->
+    <!-- ========================================================== -->
+
+    <!-- Convert the Lancer to a CE-compatible 7.62 NATO assault rifle. -->
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>Gun_GOW_MK2Lancer</defName>
+
+        <statBases>
+            <WorkToMake>50000</WorkToMake>
+            <Mass>5.8</Mass>
+            <Bulk>6.0</Bulk>
+            <SwayFactor>1.0</SwayFactor>
+            <ShotSpread>0.055</ShotSpread>
+            <SightsEfficiency>1.05</SightsEfficiency>
+            <RangedWeapon_Cooldown>0.30</RangedWeapon_Cooldown>
+        </statBases>
+
+        <costList>
+            <Steel>115</Steel>
+            <ComponentIndustrial>11</ComponentIndustrial>
+        </costList>
+
+        <Properties>
+            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+            <hasStandardCommand>true</hasStandardCommand>
+            <defaultProjectile>Bullet_762x51mmNATO_FMJ</defaultProjectile>
+            <burstShotCount>6</burstShotCount>
+            <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+            <warmupTime>1.0</warmupTime>
+            <range>40</range>
+            <soundCast>Shot_GOW_MK2Lancer</soundCast>
+            <soundCastTail>GunTail_Medium</soundCastTail>
+            <muzzleFlashScale>9</muzzleFlashScale>
+            <recoilAmount>0.9</recoilAmount>
+        </Properties>
+        <AmmoUser>
+            <magazineSize>60</magazineSize>
+            <reloadTime>4.5</reloadTime>
+            <ammoSet>AmmoSet_762x51mmNATO</ammoSet>
+        </AmmoUser>
+        <FireModes>
+            <aiUseBurstMode>true</aiUseBurstMode>
+            <aimedBurstShotCount>3</aimedBurstShotCount>
+        </FireModes>
+        <weaponTags>
+            <li>CE_AI_AssaultWeapon</li>
+            <li>CE_AI_Rifle</li>
+            <li>IndustrialGunAdvanced</li>
+        </weaponTags>
+    </Operation>
+
+    <!-- Replace the source chainsaw melee entry with CE-compatible chainsaw behavior. -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Gun_GOW_MK2Lancer"]/tools</xpath>
+        <value>
+            <tools>
+                <li Class="CombatExtended.ToolCE">
+                    <label>chainsaw bayonet</label>
+                    <capacities>
+                        <li>Cut</li>
+                    </capacities>
+                    <power>25</power>
+                    <cooldownTime>0.55</cooldownTime>
+                    <armorPenetrationSharp>5</armorPenetrationSharp>
+                    <chanceFactor>4.0</chanceFactor>
+                    <soundMeleeHit>Shot_GOW_LancerHit</soundMeleeHit>
+                    <soundMeleeMiss>Shot_GOW_LancerMiss</soundMeleeMiss>
+                </li>
+            </tools>
+        </value>
+    </Operation>
+
+    <!-- ====================================================== -->
+    <!-- COG MX8 Snub Pistol                                   -->
+    <!-- ====================================================== -->
+
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>Gun_GOW_SnubPistol</defName>
+
+        <statBases>
+            <WorkToMake>9200</WorkToMake>
+            <Mass>2.2</Mass>
+            <Bulk>1.8</Bulk>
+            <SwayFactor>0.85</SwayFactor>
+            <ShotSpread>0.055</ShotSpread>
+            <SightsEfficiency>0.90</SightsEfficiency>
+            <RangedWeapon_Cooldown>0.22</RangedWeapon_Cooldown>
+        </statBases>
+        <costList>
+            <Steel>45</Steel>
+            <ComponentIndustrial>2</ComponentIndustrial>
+        </costList>
+        <Properties>
+            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+            <hasStandardCommand>true</hasStandardCommand>
+            <defaultProjectile>Bullet_10mmAuto_FMJ</defaultProjectile>
+            <warmupTime>0.20</warmupTime>
+            <range>25</range>
+            <soundCast>Shot_GOW_Snub</soundCast>
+            <soundCastTail>GunTail_Light</soundCastTail>
+            <muzzleFlashScale>1.5</muzzleFlashScale>
+            <recoilAmount>0.45</recoilAmount>
+        </Properties>
+        <AmmoUser>
+            <magazineSize>12</magazineSize>
+            <reloadTime>1.6</reloadTime>
+            <ammoSet>AmmoSet_10mmAuto</ammoSet>
+        </AmmoUser>
+        <weaponTags>
+            <li>CE_Sidearm</li>
+            <li>CE_AI_Pistol</li>
+            <li>CE_OneHandedWeapon</li>
+        </weaponTags>
+    </Operation>
+
+    <!-- Replace vanilla melee tool with a CE-compatible pistol-whip tool. -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Gun_GOW_SnubPistol"]/tools</xpath>
+        <value>
+            <tools>
+                <li Class="CombatExtended.ToolCE">
+                    <label>grip</label>
+                    <capacities>
+                        <li>Blunt</li>
+                    </capacities>
+                    <power>8</power>
+                    <cooldownTime>1.8</cooldownTime>
+                    <armorPenetrationBlunt>0.8</armorPenetrationBlunt>
+                </li>
+            </tools>
+        </value>
+    </Operation>
+    <!-- ====================================================== -->
+    <!-- COG Longshot Sniper Rifle                              -->
+    <!-- ====================================================== -->
+
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>Gun_GOW_Longshot</defName>
+
+        <statBases>
+            <WorkToMake>50000</WorkToMake>
+            <Mass>6.5</Mass>
+            <Bulk>6.5</Bulk>
+            <SwayFactor>0.55</SwayFactor>
+            <ShotSpread>0.018</ShotSpread>
+            <SightsEfficiency>1.35</SightsEfficiency>
+            <RangedWeapon_Cooldown>4.0</RangedWeapon_Cooldown>
+        </statBases>
+        <costList>
+            <Steel>95</Steel>
+            <ComponentIndustrial>9</ComponentIndustrial>
+        </costList>
+        <Properties>
+            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+            <hasStandardCommand>true</hasStandardCommand>
+            <defaultProjectile>Bullet_338Lapua_FMJ</defaultProjectile>
+            <warmupTime>1.5</warmupTime>
+            <range>58</range>
+            <soundCast>Shot_GOW_Longshot</soundCast>
+            <soundCastTail>GunTail_Heavy</soundCastTail>
+            <muzzleFlashScale>9</muzzleFlashScale>
+            <recoilAmount>2.2</recoilAmount>
+        </Properties>
+        <AmmoUser>
+            <magazineSize>1</magazineSize>
+            <reloadTime>2.8</reloadTime>
+            <ammoSet>AmmoSet_338Lapua</ammoSet>
+        </AmmoUser>
+        <FireModes>
+            <aiAimMode>AimedShot</aiAimMode>
+        </FireModes>
+        <weaponTags>
+            <li>CE_AI_SniperRifle</li>
+            <li>CE_AI_Rifle</li>
+        </weaponTags>
+    </Operation>
+
+    <!-- Replace vanilla Longshot melee tools with CE melee tools. -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Gun_GOW_Longshot"]/tools</xpath>
+        <value>
+            <tools>
+            
+                <li Class="CombatExtended.ToolCE">
+                    <label>stock</label>
+                    <capacities>
+                        <li>Blunt</li>
+                    </capacities>
+                    <power>8</power>
+                    <cooldownTime>2.2</cooldownTime>
+                    <armorPenetrationBlunt>0.8</armorPenetrationBlunt>
+                </li>
+
+                <li Class="CombatExtended.ToolCE">
+                    <label>barrel</label>
+                    <capacities>
+                        <li>Blunt</li>
+                        <li>Poke</li>
+                    </capacities>
+                    <power>8</power>
+                    <cooldownTime>2.0</cooldownTime>
+                    <armorPenetrationBlunt>0.7</armorPenetrationBlunt>
+                    <armorPenetrationSharp>0.5</armorPenetrationSharp>
+                </li>
+            </tools>
+        </value>
+    </Operation>
+
+    <!-- ====================================================== -->
+    <!-- COG Gnasher Shotgun                                   -->
+    <!-- ====================================================== -->
+
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>Gun_GOW_Gnasher</defName>
+
+        <statBases>
+            <WorkToMake>25500</WorkToMake>
+            <Mass>5.0</Mass>
+            <Bulk>5.0</Bulk>
+            <SwayFactor>0.80</SwayFactor>
+            <ShotSpread>0.14</ShotSpread>
+            <SightsEfficiency>0.70</SightsEfficiency>
+            <RangedWeapon_Cooldown>0.85</RangedWeapon_Cooldown>
+        </statBases>
+        <costList>
+            <Steel>65</Steel>
+            <ComponentIndustrial>4</ComponentIndustrial>
+        </costList>
+        <Properties>
+            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+            <hasStandardCommand>true</hasStandardCommand>
+            <defaultProjectile>Bullet_10Gauge_Buck</defaultProjectile>
+            <warmupTime>0.55</warmupTime>
+            <range>21</range>
+            <soundCast>Shot_GOW_Gnasher</soundCast>
+            <soundCastTail>GunTail_Heavy</soundCastTail>
+            <muzzleFlashScale>9</muzzleFlashScale>
+            <recoilAmount>1.45</recoilAmount>
+        </Properties>
+        <AmmoUser>
+            <magazineSize>8</magazineSize>
+            <reloadTime>3.4</reloadTime>
+            <ammoSet>AmmoSet_10Gauge</ammoSet>
+        </AmmoUser>
+        <FireModes>
+            <aiAimMode>AimedShot</aiAimMode>
+        </FireModes>
+        <weaponTags>
+            <li>CE_AI_Shotgun</li>
+            <li>CE_CloseCombat</li>
+        </weaponTags>
+    </Operation>
+
+    <!-- Replace source mod melee tools with CE-compatible blunt weapon tools. -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Gun_GOW_Gnasher"]/tools</xpath>
+        <value>
+            <tools>
+
+                <li Class="CombatExtended.ToolCE">
+                    <label>stock</label>
+                    <capacities>
+                        <li>Blunt</li>
+                    </capacities>
+                    <power>10</power>
+                    <cooldownTime>2.0</cooldownTime>
+                    <armorPenetrationBlunt>1.15</armorPenetrationBlunt>
+                </li>
+
+                <li Class="CombatExtended.ToolCE">
+                    <label>barrel</label>
+                    <capacities>
+                        <li>Blunt</li>
+                    </capacities>
+                    <power>10</power>
+                    <cooldownTime>2.0</cooldownTime>
+                    <armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+                </li>
+
+            </tools>
+        </value>
+    </Operation>
+
+</Patch>

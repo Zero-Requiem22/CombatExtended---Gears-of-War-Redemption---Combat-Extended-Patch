@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+
+    <name>Gears of War: Redemption - Combat Extended Patch</name>
+
+    <author>Zer0Requiem</author>
+
+    <packageId>Zer0Requiem.GearsOfWarRedemption.CE</packageId>
+
+    <description>Combat Extended compatibility patch for Gears of War: Redemption.</description>
+
+    <supportedVersions>
+        <li>1.6</li>
+    </supportedVersions>
+
+    <modDependencies>
+        <li>
+            <packageId>CETeam.CombatExtended</packageId>
+            <displayName>Combat Extended</displayName>
+        </li>
+        <li>
+            <packageId>JTC.GearsOfWar</packageId>
+            <displayName>Gears of War: Redemption</displayName>
+        </li>
+    </modDependencies>
+
+    <loadAfter>
+        <li>CETeam.CombatExtended</li>
+        <li>JTC.GearsOfWar</li>
+    </loadAfter>
+
+</ModMetaData>
